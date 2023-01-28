@@ -1,0 +1,14 @@
+---
+- hosts: nodes           
+  become: yes
+  tasks:
+    - name: Installing HTTP service on all nodes
+      yum:
+        name: httpd
+        state: present 
+    - name: Active http service in all nodes
+      service:
+        name: httpd
+        state: started
+        enabled: yes        
+

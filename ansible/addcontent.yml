@@ -1,0 +1,11 @@
+
+---
+- hosts: nodes 
+  tasks:
+    - name: adding content
+      copy:
+        dest: "/home/ec2-user/dev-devops.txt"
+        content: |
+                Abdul rRhman UK
+                Kerala
+                DevOps Engineer at HCL

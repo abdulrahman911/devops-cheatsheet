@@ -1,0 +1,13 @@
+---
+- hosts: nodes
+  tasks:
+    - name: create multiple files
+      file:
+        path: "/home/ec2-user/{{ item }}"
+        state: touch
+        mode: 0777
+      with_items:
+      - access.log
+      - system.log
+      - application.log
+      - profile.log

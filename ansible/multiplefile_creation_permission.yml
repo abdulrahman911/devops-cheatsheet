@@ -1,0 +1,12 @@
+---
+- hosts: nodes
+  tasks: 
+     - name: Creating multiplefile, with different permission
+       file:
+         path: "{{ item.location }}"
+         state: directory
+         mode: "{{ item.mode }}"
+       with_items:
+       - { location: '6.txt', mode: '755' }
+       - { location: '777rocket.txt', mode: '777' }
+

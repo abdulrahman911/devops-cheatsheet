@@ -1,0 +1,8 @@
+---
+- hosts: nodes
+  tasks: 
+     - name: Adding new line into the file
+       lineinfile:
+         path: "/home/ec2-user/devops.txt"
+         line: "Hello i would like to tell you that, you are an amzing person!!!"
+           

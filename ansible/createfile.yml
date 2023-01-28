@@ -1,0 +1,9 @@
+---
+- hosts: nodes 
+  tasks:
+     - name: Creating a file
+       file:
+         path: "/home/ec2-user/devops.txt"
+         state: touch
+
+
